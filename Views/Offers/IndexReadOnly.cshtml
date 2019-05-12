@@ -1,0 +1,62 @@
+﻿@model IEnumerable<TripAdvisor.Models.OffersTrans>
+
+@{
+    ViewBag.Title = "IndexReadOnly";
+}
+
+<h2 class="text-center">OFFERS</h2>
+
+<table class="table table-striped table-hover">
+    <tr>
+        <th>
+            <h6>To location</h6>
+        </th>
+        <th>
+            <h6>Departure from</h6>
+        </th>
+        <th>
+            <h6>Transporter</h6>
+        </th>
+        <th>
+            <h6>Apartment</h6>
+        </th>
+        <th>
+            <h6>Total Price</h6>
+        </th>
+       
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.offers.locationName)
+            </td>
+            <td>
+                @if (item.offers.locationName.Equals(item.transportation.startLocation))
+                {
+                    @Html.DisplayFor(modelItem => item.transportation.endLocation)
+
+                }
+                else
+                {
+                    @Html.DisplayFor(modelItem => item.transportation.startLocation)
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.transportation.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.offers.appartmentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.offers.totalPrice) denars
+            </td>
+            
+          
+        </tr>
+    }
+
+</table>
+
