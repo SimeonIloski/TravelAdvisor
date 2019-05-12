@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron" style="background-image:url('http://slo-tours.si/wp-content/uploads/2017/12/Untitled-design-4.jpg')">
+
+    <h1>WELCOME TO TRIPADVISOR</h1>
+    <p>Here you can find the base advices for trips around Macedonia, posible locations to see, apartments to stay at or transportation to
+    get to each location. If you are a premium user of our site you have a discount in our offers tab which includes transportation to the wanted
+    location and accomodation in a one bedroom appartment</p>
+</div>
+
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>Location</h2>
+        <p>
+            There a lot of locations to see in Macedonia. If you want to see a List of them click on Location tab or on the button bellow
+        </p>
+        <li class="btn btn-default text-primary">@Html.ActionLink("See All Locations", "Index", "Locations") &rArr;</li>
+    </div>
+    <div class="col-md-3">
+        <h2>Find Appartments</h2>
+        <p>You can find alot of different type of appartments whit various ratingand prices at the Appartments tab above or the button bellow</p>
+        <p>  <li class="btn btn-default text-primary">@Html.ActionLink("See All Appartments", "Index", "Appartments") &rArr;</li></p>
+    </div>
+    <div class="col-md-3">
+        <h2>Transportation</h2>
+        <p>Here is the list of the most public transportations in Macedonia </p>
+        <p>  <li class="btn btn-default text-primary">@Html.ActionLink("See All Transportations", "Index", "Transportations") &rArr;</li></p>
+    </div>
+    <div class="col-md-3">
+        <h2>TripAdvisor Offers</h2>
+        <p>Here is the list of the offers fromTrippAdvisor. There a lot of different choices so choose what you need. If you're a premium user
+        catch a good discount.</p>
+        <p>  <li class="btn btn-default text-primary">@Html.ActionLink("TripAdvisor Offers", "Index", "Offers") &rArr;</li></p>
+    </div>
+</div>
